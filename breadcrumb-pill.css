@@ -1,0 +1,36 @@
+/* Shared breadcrumb pill component — used on the homepage/category, blog
+   listing, single blog post, and app/game detail pages so the breadcrumb
+   looks identical everywhere. */
+.breadcrumb-pill {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(to right, #36db85, #00c35e);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    max-width: 100%;
+}
+
+.breadcrumb-pill a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.breadcrumb-pill a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.breadcrumb-pill .separator {
+    opacity: 0.75;
+}
+
+.breadcrumb-pill .breadcrumb-current {
+    color: rgba(255, 255, 255, 0.85);
+}

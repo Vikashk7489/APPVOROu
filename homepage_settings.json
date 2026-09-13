@@ -1,0 +1,84 @@
+{
+    "hero": {
+        "visible": 1,
+        "content": {
+            "title": "APKTEMPLATES",
+            "description": "An Android App Store where you can download your favorite APK."
+        },
+        "image_path": ""
+    },
+    "recommended": {
+        "visible": 1,
+        "content": {
+            "title": "Recommended",
+            "limit": 4
+        }
+    },
+    "popular": {
+        "visible": 1,
+        "content": {
+            "title": "Popular Apps",
+            "limit": "12"
+        }
+    },
+    "main_categories": {
+        "visible": 1,
+        "content": {
+            "title": "Latest Games",
+            "limit": "12",
+            "view_all_text": "View All",
+            "selected_category": "1"
+        }
+    },
+    "featured_categories": {
+        "visible": 1,
+        "content": {
+            "title": "Latest Apps",
+            "limit": "12",
+            "view_all_text": "View All",
+            "selected_category": "13"
+        }
+    },
+    "editors_choice": {
+        "visible": 1,
+        "content": {
+            "title": "Editor's Choice",
+            "limit": "6"
+        }
+    },
+    "latest_post": {
+        "visible": 1,
+        "content": {
+            "title": "Latest Post",
+            "per_page": "12"
+        }
+    },
+    "categories": {
+        "visible": 1,
+        "content": {
+            "title": "Categories"
+        }
+    },
+    "footer": {
+        "visible": 1,
+        "content": {
+            "copyright": "\u00a9 copyright 2024. All Right Reserved."
+        }
+    },
+    "latest_games": {
+        "visible": 1,
+        "content": {
+            "title": "Latest Gamesfgerg",
+            "limit": "12",
+            "view_all_text": "View All"
+        }
+    },
+    "latest_apps": {
+        "visible": 1,
+        "content": {
+            "title": "Latest Appsgrg",
+            "limit": "12",
+            "view_all_text": "View All"
+        }
+    }
+}

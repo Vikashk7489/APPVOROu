@@ -1,0 +1,243 @@
+:root {
+            --primary-color: #36db85;
+            --secondary-color: #00c35e;
+            --dark-color: #212529;
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: #EFF7F1;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+.container {
+            width: 100%;
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+.blog-header {
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+.section-title {
+            margin-bottom: 25px;
+        }
+
+.section-title h2 {
+            font-size: 2rem;
+        }
+
+/* Blog grid: 4 columns desktop, 2 tablet, 1 mobile */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+.blog-card {
+            background-color: white;
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+.blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: rgba(149, 157, 165, 0.35) 0px 12px 28px;
+        }
+
+.blog-card-img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+
+.blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+.blog-card:hover .blog-card-img img {
+            transform: scale(1.06);
+        }
+
+.blog-card-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+            font-size: 2rem;
+        }
+
+.blog-card-body {
+            padding: 18px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+.blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: #868e96;
+            margin-bottom: 10px;
+        }
+
+.blog-card-views,
+        .blog-card-comments {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+.blog-card-views i,
+        .blog-card-comments i {
+            font-size: 0.85rem;
+        }
+
+.blog-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+.blog-card-excerpt {
+            font-size: 0.9rem;
+            color: #555;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+
+.blog-card-readmore {
+            margin-top: auto;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+.no-posts {
+            text-align: center;
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            grid-column: 1 / -1;
+        }
+
+.blog-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+.blog-pagination a,
+        .blog-pagination span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 38px;
+            height: 38px;
+            padding: 0 10px;
+            border-radius: 8px;
+            background-color: white;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 12px;
+        }
+
+.blog-pagination a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+.blog-pagination .current {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+body.dark {
+            background-color: #1a202c;
+            color: #f3f4f6;
+        }
+
+body.dark .blog-card {
+            background-color: #2d3748;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+body.dark .blog-card-title,
+        body.dark .section-title h2 {
+            color: #f3f4f6;
+        }
+
+body.dark .blog-card-excerpt {
+            color: #cbd5e0;
+        }
+
+body.dark .blog-card-meta {
+            color: #a0aec0;
+        }
+
+body.dark .no-posts,
+        body.dark .blog-pagination a,
+        body.dark .blog-pagination span {
+            background-color: #2d3748;
+            color: #f3f4f6;
+        }
+
+/* Tablet: 2 columns */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+
+/* Mobile: 1 column */
+        @media (max-width: 767px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }

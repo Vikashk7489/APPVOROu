@@ -1,0 +1,130 @@
+/* Base Styles */
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background-color: #EFF7F1;
+                }
+
+.container {
+                    width: 100%;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    padding: 40px 20px;
+                }
+
+/* Page Header Styles */
+                .page-header {
+                    background-color: rgb(31 41 55);
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+
+.page-header h1 {
+                    color: white;
+                    font-size: 2.5rem;
+                    line-height: 1.25;
+                    font-weight: 700;
+                }
+
+/* Page Content Styles */
+                .page-content {
+                    background-color: white;
+                    border-radius: 18px;
+                    padding: 2.5rem;
+                    margin-bottom: 40px;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+
+.page-content h2 {
+                    font-size: 1.8rem;
+                    margin: 1.5rem 0 1rem;
+                    color: #36db85;
+                }
+
+.page-content h3 {
+                    font-size: 1.5rem;
+                    margin: 1.3rem 0 0.8rem;
+                    color: #00c35e;
+                }
+
+.page-content p {
+                    margin-bottom: 1rem;
+                    line-height: 1.7;
+                }
+
+.page-content ul,
+                .page-content ol {
+                    margin-bottom: 1.5rem;
+                    padding-left: 2rem;
+                }
+
+.page-content li {
+                    margin-bottom: 0.5rem;
+                }
+
+.page-content a {
+                    color: #4895ef;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+.page-content a:hover {
+                    text-decoration: underline;
+                }
+
+.page-content img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 12px;
+                    margin: 1.5rem 0;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+
+/* Dark Mode Styles */
+                body.dark {
+                    background-color: #1a202c;
+                    color: #f3f4f6;
+                }
+
+body.dark .page-content {
+                    background-color: #2d3748;
+                    color: #f3f4f6;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+                }
+
+body.dark .page-header {
+                    background-color: #2d3748;
+                }
+
+body.dark .page-header h1,
+                body.dark .page-content h2,
+                body.dark .page-content h3 {
+                    color: #ffffff;
+                }
+
+body.dark .page-content a {
+                    color: #4cc9f0;
+                }
+
+/* Responsive Styles */
+                @media (max-width: 768px) {
+                    .page-header h1 {
+                        font-size: 1.5rem;
+                    }
+                    
+                    .page-content {
+                        padding: 1.5rem;
+                    }
+                    
+                    .page-content h2 {
+                        font-size: 1.5rem;
+                    }
+                    
+                    .page-content h3 {
+                        font-size: 1.3rem;
+                    }
+                }

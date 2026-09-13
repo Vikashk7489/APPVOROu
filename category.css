@@ -1,0 +1,253 @@
+:root {
+            --primary-color: #36db85;
+            --secondary-color: #00c35e;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4cc9f0;
+            --danger-color: #f72585;
+            --recommended-color: #9c27b0;
+            --games-color: #FF6B6B;
+            --apps-color: #4CC9F0;
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: #EFF7F1;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+.container {
+            width: 100%;
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+.category-header {
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+.section-title {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+.section-title h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 2rem;
+        }
+
+.icon {
+            display: inline-flex;
+            height: 2rem;
+            width: 2rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background-image: linear-gradient(to bottom right, var(--gradient-from), var(--gradient-to));
+            color: white;
+            font-size: 0.875rem;
+            box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+        }
+
+svg.svg-inline--fa.icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+.apps-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+.app-card {
+            background-color: white;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 297px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+.app-card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+.app-card-img {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+.app-card-img img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+.app-card:hover .app-card-img img {
+            transform: scale(1.05);
+        }
+
+.app-card-title {
+            font-size: .875rem;
+            padding: 0 1rem;
+            margin-top: -.25rem;
+            margin-bottom: .25rem;
+            text-align: center;
+        }
+
+.app-card-meta {
+            display: flex;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+.app-card-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+            position: relative;
+            margin-top: auto;
+        }
+
+.app-card-details::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 1px;
+            background-color: #e0e0e0;
+        }
+
+.app-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 50%;
+        }
+
+.app-detail svg {
+            width: 16px;
+            height: 16px;
+        }
+
+.app-size {
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+.app-category {
+            border-radius: 10px;
+            color: var(--secondary-color);
+        }
+
+.app-version {
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: #2e7d32;
+        }
+
+.game-badge, .app-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+.game-badge {
+            background-color: #ff2243;
+        }
+
+.app-badge {
+            background-color: var(--apps-color);
+        }
+
+.no-apps {
+            text-align: center;
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            grid-column: 1 / -1;
+        }
+
+@media (max-width: 768px) {
+            .apps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+body.dark {
+            background-color: #1a202c;
+            color: #f3f4f6;
+        }
+
+body.dark .app-card {
+            background-color: #2d3748;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+body.dark .app-card-title,
+        body.dark .app-category,
+        body.dark .app-version,
+        body.dark .section-title h2 {
+            color: #f3f4f6;
+        }
+
+body.dark .no-apps {
+            background-color: #2d3748;
+            color: #f3f4f6;
+        }
+
+/* Tablet Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .apps-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
